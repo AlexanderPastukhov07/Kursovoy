@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog>
+  <item>
+    <id>1</id>
+    <name>Модель №1</name>
+    <category>Треккинговая обувь</category>
+    <image>images/catalog/salomon-boot.jpg</image>
+    <label>new</label>
+    <description>Треккинговая обувь, модель 1</description>
+  </item>
+  <item>
+    <id>2</id>
+    <name>Модель №2</name>
+    <category>Треккинговая обувь</category>
+    <image>images/catalog/veles_boots.jpg</image>
+    <label></label>
+    <description>Треккинговая обувь, модель 2</description>
+  </item>
+  <item>
+    <id>3</id>
+    <name>Модель №3</name>
+    <category>Беговая обувь</category>
+    <image>images/catalog/new_balance_running.jpg</image>
+    <label></label>
+    <description>Беговая обувь, модель 3</description>
+  </item>
+  <item>
+    <id>4</id>
+    <name>Модель №4</name>
+    <category>Беговая обувь</category>
+    <image>images/catalog/reebok_running.jpg</image>
+    <label></label>
+    <description>Беговая обувь, модель 4</description>
+  </item>
+  <item>
+    <id>5</id>
+    <name>Модель №5</name>
+    <category>Треккинговая обувь</category>
+    <image>images/catalog/haix_boot.jpg</image>
+    <label>hot</label>
+    <description>Треккинговая обувь, модель 5</description>
+  </item>
+  <item>
+    <id>6</id>
+    <name>Модель №6</name>
+    <category>Треккинговая обувь</category>
+    <image>images/catalog/prabos_boot.jpg</image>
+    <label></label>
+    <description>Треккинговая обувь, модель 6</description>
+  </item>
+  <item>
+    <id>7</id>
+    <name>Модель №7</name>
+    <category>Треккинговая обувь</category>
+    <image>images/catalog/lowa_boot.jpg</image>
+    <label>sale</label>
+    <description>Треккинговая обувь, модель 7</description>
+  </item>
+  <item>
+    <id>8</id>
+    <name>Модель №8</name>
+    <category>Треккинговая обувь</category>
+    <image>images/catalog/timberland_boot.jpg</image>
+    <label></label>
+    <description>Треккинговая обувь, модель 8</description>
+  </item>
+  <item>
+    <id>9</id>
+    <name>Модель №9</name>
+    <category>Беговая обувь</category>
+    <image>images/catalog/asics_trail_run.jpg</image>
+    <label></label>
+    <description>Беговая обувь, модель 9</description>
+  </item>
+  <item>
+    <id>10</id>
+    <name>Модель №10</name>
+    <category>Беговая обувь</category>
+    <image>images/catalog/ua_sneaker.jpg</image>
+    <label></label>
+    <description>Беговая обувь, модель 10</description>
+  </item>
+  <item>
+    <id>11</id>
+    <name>Модель №11</name>
+    <category>Беговая обувь</category>
+    <image>images/catalog/asics_running.jpg</image>
+    <label></label>
+    <description>Беговая обувь, модель 11</description>
+  </item>
+  <item>
+    <id>12</id>
+    <name>Модель №12</name>
+    <category>Треккинговая обувь</category>
+    <image>images/catalog/veles_low_boot.png</image>
+    <label></label>
+    <description>Треккинговая обувь, модель 12</description>
+  </item>
+</catalog> 

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<brands>
+  <brand>
+    <name>New Balance</name>
+    <logo>images/brands/New_Balance_logo.svg.png</logo>
+    <alt>New Balance</alt>
+  </brand>
+  <brand>
+    <name>Nike</name>
+    <logo>images/brands/Logo_NIKE.svg.png</logo>
+    <alt>Nike</alt>
+  </brand>
+  <brand>
+    <name>Adidas</name>
+    <logo>images/brands/Adidas_2022_logo.svg.png</logo>
+    <alt>Adidas</alt>
+  </brand>
+  <brand>
+    <name>Asics</name>
+    <logo>images/brands/Asics_Logo.svg.png</logo>
+    <alt>Asics</alt>
+  </brand>
+  <brand>
+    <name>Salomon</name>
+    <logo>images/brands/Salomon_logo_2022.svg.png</logo>
+    <alt>Salomon</alt>
+  </brand>
+  <brand>
+    <name>Reebok</name>
+    <logo>images/brands/Reebok_red_logo.svg.png</logo>
+    <alt>Reebok</alt>
+  </brand>
+  <brand>
+    <name>Under Armour</name>
+    <logo>images/brands/Under_armour_logo.svg.png</logo>
+    <alt>Under Armour</alt>
+  </brand>
+  <brand>
+    <name>Prabos</name>
+    <logo>images/brands/prabos-logo.svg</logo>
+    <alt>Prabos</alt>
+  </brand>
+  <brand>
+    <name>Timberland</name>
+    <logo>images/brands/Timberland-Logo.svg.png</logo>
+    <alt>Timberland</alt>
+  </brand>
+  <brand>
+    <name>HAIX</name>
+    <logo>images/brands/HAIX_Logo.svg</logo>
+    <alt>HAIX</alt>
+  </brand>
+  <brand>
+    <name>LOWA</name>
+    <logo>images/brands/Logo_Lowa.svg.png</logo>
+    <alt>LOWA</alt>
+  </brand>
+  <brand>
+    <name>VELES</name>
+    <logo>images/brands/veleslogo.svg</logo>
+    <alt>VELES</alt>
+  </brand>
+</brands> 

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Модельный ряд | PRO SHOES</title>
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1 class="logo">PRO SHOES</h1>
+      <div class="header-underline"></div>
+      <nav>
+        <ul class="nav-list">
+          <li><a href="index.html">ГЛАВНАЯ</a></li>
+          <li><a href="catalog.html" class="active">МОДЕЛЬНЫЙ РЯД</a></li>
+          <li><a href="about.html">О НАС</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <div class="catalog-controls">
+      <div class="catalog-type-buttons">
+        <button class="type-btn active" data-type="all">ВСЯ ОБУВЬ</button>
+        <button class="type-btn" data-type="run">БЕГОВАЯ ОБУВЬ</button>
+        <button class="type-btn" data-type="trek">ТРЕККИНГОВАЯ ОБУВЬ</button>
+      </div>
+      <div class="catalog-subtype-buttons" style="display:none; gap:24px; margin-bottom:12px;"></div>
+      <div class="catalog-filters">
+        <button class="filters-toggle">Фильтры ▼</button>
+        <form class="filters-dropdown">
+          <label>Бренд:
+            <select name="brand">
+              <option value="">Все</option>
+              <option value="salomon">Salomon</option>
+              <option value="veles">Veles</option>
+              <option value="asics">Asics</option>
+              <option value="reebok">Reebok</option>
+              <option value="haix">Haix</option>
+              <option value="prabos">Prabos</option>
+              <option value="timberland">Timberland</option>
+              <option value="newbalance">New Balance</option>
+              <option value="ua">UA</option>
+            </select>
+          </label>
+          <label>Размер:
+            <select name="size">
+              <option value="">Все</option>
+              <option value="36">36</option>
+              <option value="37">37</option>
+              <option value="38">38</option>
+              <option value="39">39</option>
+              <option value="40">40</option>
+              <option value="41">41</option>
+              <option value="42">42</option>
+              <option value="43">43</option>
+              <option value="44">44</option>
+              <option value="45">45</option>
+            </select>
+          </label>
+          <label>Цена до:
+            <input type="number" name="price" min="0" placeholder="BYN">
+          </label>
+          <button type="submit">Применить</button>
+        </form>
+      </div>
+    </div>
+    <section class="shop-catalog">
+      <div class="shop-row">
+        <div class="shop-card" 
+        data-type="trek"
+        data-subtype="mid"
+        data-brand="salomon"
+        data-sizes="39,40,41,42,43,44"
+        data-price="752" onclick="window.location.href='sorry.html'" style="cursor:pointer;">
+          <div class="shop-badge new">NEW</div>
+          <img src="images/catalog/salomon-boot.jpg" alt="Модель №1">
+          <div class="shop-card-title">SALOMON QUEST 4 GORE-TEX</div>
+        </div>
+        <div class="shop-card"
+        data-type="trek"
+        data-subtype="mid"
+        data-brand="veles"
+        data-sizes="39,40,41,42,43,44"
+        data-price="353" onclick="window.location.href='sorry.html'" style="cursor:pointer;">
+          <img src="images/catalog/veles_boots.jpg" alt="Модель №1">
+          <div class="shop-card-title">VELES KROK 3S</div>
+        </div>
+        <div class="shop-card"
+        data-type="run"
+        data-subtype="classic"
+        data-brand="newbalance"
+        data-sizes="39,40,41,42,43,44"
+        data-price="830" onclick="window.location.href='sorry.html'" style="cursor:pointer;">
+          <img src="images/catalog/new_balance_running.jpg" alt="Модель №1">
+          <div class="shop-card-title">New Balance FuelCell Rebel v4</div>
+        </div>
+      </div>
+      <div class="shop-row">
+        <div class="shop-card"
+        data-type="run"
+        data-subtype="classic"
+        data-brand="reebok"
+        data-sizes="39,40,41,42,43,44"
+        data-price="327" onclick="window.location.href='sorry.html'" style="cursor:pointer;">
+          <img src="images/catalog/reebok_running.jpg" alt="Модель №1">
+          <div class="shop-card-title">Reebok Zignition</div>
+        </div>
+        <div class="shop-card"
+        data-type="trek"
+        data-subtype="mid"
+        data-brand="haix"
+        data-sizes="39,40,41,42,43,44"
+        data-price="1055" onclick="window.location.href='shoe.html'" style="cursor:pointer;">
+          <img src="images/catalog/haix_boot.jpg" alt="Модель №1">
+          <div class="shop-card-title">HAIX Scout-2.0</div>
+        </div>
+        <div class="shop-card"
+        data-type="trek"
+        data-subtype="mid"
+        data-brand="prabos"
+        data-sizes="39,40,41,42,43,44"
+        data-price="945" onclick="window.location.href='sorry.html'" style="cursor:pointer;">
+          <img src="images/catalog/prabos_boot.jpg" alt="Модель №1">
+          <div class="shop-card-title">Prabos GREYMAN MID GTX</div>
+        </div>
+      </div>
+      <div class="shop-row">
+        <div class="shop-card"
+        data-type="trek"
+        data-subtype="mid"
+        data-brand="lowa"
+        data-sizes="39,40,41,42,43,44"
+        data-price="1170" onclick="window.location.href='sorry.html'" style="cursor:pointer;">
+          <div class="shop-badge hot">HOT</div>
+          <img src="images/catalog/lowa_boot.jpg" alt="Модель №1">
+          <div class="shop-card-title">LOWA TIBET EVO GTX</div>
+        </div>
+        <div class="shop-card"
+        data-type="trek"
+        data-subtype="mid"
+        data-brand="timberland"
+        data-sizes="39,40,41,42,43,44"
+        data-price="510" onclick="window.location.href='sorry.html'" style="cursor:pointer;">
+          <img src="images/catalog/timberland_boot.jpg" alt="Модель №1">
+          <div class="shop-card-title">Timberland Mt. Maddsen Peak Mid Waterproof Hiking Boot</div>
+        </div>
+        <div class="shop-card"
+        data-type="run"
+        data-subtype="trail"
+        data-brand="asics"
+        data-sizes="39,40,41,42,43,44"
+        data-price="292" onclick="window.location.href='sorry.html'" style="cursor:pointer;">
+          <div class="shop-badge sale">-30%</div>
+          <img src="images/catalog/asics_trail_run.jpg" alt="Модель №1">
+          <div class="shop-card-title">ASICS GEL-VENTURE 10</div>
+        </div>
+      </div>
+      <div class="shop-row">
+        <div class="shop-card"
+        data-type="run"
+        data-subtype="classic"
+        data-brand="ua"
+        data-sizes="39,40,41,42,43,44"
+        data-price="475" onclick="window.location.href='sorry.html'" style="cursor:pointer;">
+          <img src="images/catalog/ua_sneaker.jpg" alt="Модель №1">
+          <div class="shop-card-title">UA Infinite Pro 2</div>
+        </div>
+        <div class="shop-card"
+        data-type="run"
+        data-subtype="classic"
+        data-brand="asics"
+        data-sizes="39,40,41,42,43,44"
+        data-price="730" onclick="window.location.href='sorry.html'" style="cursor:pointer;">
+          <img src="images/catalog/asics_running.jpg" alt="Модель №1">
+          <div class="shop-card-title">ASICS GEL-KAYANO 31</div>
+        </div>
+        <div class="shop-card"
+        data-type="trek"
+        data-subtype="light"
+        data-brand="veles"
+        data-sizes="39,40,41,42,43,44"
+        data-price="278" onclick="window.location.href='sorry.html'" style="cursor:pointer;">
+          <img src="images/catalog/veles_low_boot.png" alt="Модель №1">
+          <div class="shop-card-title">VELES KROK 2N</div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="footer-content">
+      <div class="contacts">
+        <p>Наши контакты:</p>
+        <ul class="socials">
+          <li><a href="#"><img src="images/socials/instagram.svg.webp" alt="Instagram"></a></li>
+          <li><a href="#"><img src="images/socials/facebook.svg.png" alt="Facebook"></a></li>
+          <li><a href="#"><img src="images/socials/youtube.svg.png" alt="YouTube"></a></li>
+          <li><a href="#"><img src="images/socials/telegram.svg" alt="Telegram"></a></li>
+        </ul>
+        <p>+375 (29) 705-85-97</p>
+        <p>Электронная почта: <a href="mailto:pro_shoes_store@gmail.com">pro_shoes_store@gmail.com</a></p>
+      </div>
+      <div class="address">
+        <p>Наш адрес: г. Минск, проспект Победителей, 9, 3 этаж</p>
+        <p>Рабочее время: Ежедневно с 10:00 по 21:00</p>
+      </div>
+    </div>
+  </footer>
+  <script src="scripts/main.js"></script>
+  <script src="scripts/catalog.js"></script>
+  <script src="scripts/header.js"></script>
+</body>
+</html> 

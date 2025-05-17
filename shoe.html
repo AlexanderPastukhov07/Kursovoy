@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HAIX Scout-2.0 | PRO SHOES</title>
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1 class="logo">PRO SHOES</h1>
+      <div class="header-underline"></div>
+      <nav>
+        <ul class="nav-list">
+          <li><a href="index.html">ГЛАВНАЯ</a></li>
+          <li><a href="catalog.html">МОДЕЛЬНЫЙ РЯД</a></li>
+          <li><a href="about.html">О НАС</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="shoe-card">
+      <div class="shoe-card__imgbox">
+        <img src="images/catalog/haix_boot.jpg" alt="HAIX Scout-2.0">
+      </div>
+      <div class="shoe-card__info">
+        <h2>HAIX Scout-2.0</h2>
+        <div class="shoe-card__sizes">
+          <span>Размеры:</span>
+          <div class="sizes-list">
+            <button class="size-btn">36</button>
+            <button class="size-btn">37</button>
+            <button class="size-btn">38</button>
+            <button class="size-btn">39</button>
+            <button class="size-btn">40</button>
+            <button class="size-btn">41</button>
+            <button class="size-btn">42</button>
+            <button class="size-btn">43</button>
+            <button class="size-btn">44</button>
+            <button class="size-btn">45</button>
+          </div>
+        </div>
+        <div class="shoe-card__price">
+          <span>Цена:</span> <b>950 BYN</b>
+        </div>
+        <button class="order-btn" disabled>ЗАКАЗАТЬ</button>
+      </div>
+    </section>
+    <div class="shoe-card__desc">
+      <b>Описание:</b>
+      <p>Для тех, кто ценит комфорт, безопасность и стиль: HAIX Scout-2.0 сочетает износостойкую кожу с водоотталкивающей пропиткой, анатомическую поддержку стопы, антискользящую подошву и универсальный дизайн. Идеальная пара для активных будней, путешествий и работы — там, где вашим ногам нужна защита и свобода движения.</p>
+    </div>
+  </main>
+  <footer>
+    <div class="footer-content">
+      <div class="contacts">
+        <p>Наши контакты:</p>
+        <ul class="socials">
+          <li><a href="#"><img src="images/socials/instagram.svg.webp" alt="Instagram"></a></li>
+          <li><a href="#"><img src="images/socials/facebook.svg.png" alt="Facebook"></a></li>
+          <li><a href="#"><img src="images/socials/youtube.svg.png" alt="YouTube"></a></li>
+          <li><a href="#"><img src="images/socials/telegram.svg" alt="Telegram"></a></li>
+        </ul>
+        <p>+375 (29) 705-85-97</p>
+        <p>Электронная почта: <a href="mailto:pro_shoes_store@gmail.com">pro_shoes_store@gmail.com</a></p>
+      </div>
+      <div class="address">
+        <p>Наш адрес: г. Минск, проспект Победителей, 9, 3 этаж</p>
+        <p>Рабочее время: Ежедневно с 10:00 по 21:00</p>
+      </div>
+    </div>
+  </footer>
+  <div class="modal-overlay" id="order-modal">
+    <div class="modal">
+      <button class="modal-close" id="close-modal">×</button>
+      <h3>Оформление заказа</h3>
+      <form id="order-form">
+        <label>Ваше имя:<br><input type="text" name="name" required></label><br>
+        <label>Телефон:<br><input type="tel" name="phone" required pattern="[0-9\-\+\s\(\)]{7,}"></label><br>
+        <label>Email:<br><input type="email" name="email" required></label><br>
+        <input type="hidden" name="size" id="order-size">
+        <button type="submit">Заказать</button>
+      </form>
+    </div>
+  </div>
+  <script src="scripts/main.js"></script>
+  <script src="scripts/header.js"></script>
+  <script src="scripts/shoe.js"></script>
+</body>
+</html> 
