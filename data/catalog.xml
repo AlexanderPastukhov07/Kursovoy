@@ -6,7 +6,10 @@
     <category>Треккинговая обувь</category>
     <image>images/catalog/salomon-boot.jpg</image>
     <label>new</label>
+    <sizes>39,40,41,42,43,44</sizes>
+    <price>752</price>
     <description>Треккинговая обувь, модель 1</description>
+    <fullDescription>Salomon Quest 4 Gore-Tex — идеальный выбор для сложных походов: мембрана Gore-Tex, усиленная подошва, анатомическая поддержка и защита от влаги. Для тех, кто ценит комфорт и надёжность в горах.</fullDescription>
   </item>
   <item>
     <id>2</id>

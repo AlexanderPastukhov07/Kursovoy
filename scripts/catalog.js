@@ -8,12 +8,16 @@ document.addEventListener('DOMContentLoaded', function() {
         // Назначаем задержку анимации карточкам только при появлении ряда
         const cards = entry.target.querySelectorAll('.shop-card');
         cards.forEach((card, idx) => {
-          const delay = idx * 0.4;
+          const delay = idx * 0.2;
           card.style.setProperty('--delay', `${delay}s`);
           const badge = card.querySelector('.shop-badge');
           if (badge) {
             badge.style.setProperty('--badge-delay', `${delay + 0.2}s`);
           }
+          // Добавляем класс visible для запуска анимации
+          setTimeout(() => {
+            card.classList.add('visible');
+          }, delay * 1000);
         });
         // Отключаем наблюдение после того, как анимация запущена
         observer.unobserve(entry.target);
@@ -66,42 +70,57 @@ document.addEventListener('DOMContentLoaded', function() {
         subtypeButtonsBlock.appendChild(btn);
       });
       currentSubtype = subtypeOptions[type][0].value;
-      // --- Анимация для subtype-btn ---
-      setTimeout(() => {
-        document.querySelectorAll('.subtype-btn').forEach((btn, idx) => {
-          btn.style.opacity = '0';
-          btn.style.transform = 'translateY(30px)';
-          btn.style.transition = '';
-        });
-        setTimeout(() => {
-          document.querySelectorAll('.subtype-btn').forEach((btn, idx) => {
-            setTimeout(() => {
-              btn.style.transition = 'opacity 0.7s cubic-bezier(0.47,0,0.745,0.715), transform 0.7s cubic-bezier(0.47,0,0.745,0.715)';
-              btn.style.opacity = '1';
-              btn.style.transform = 'translateY(0)';
-            }, idx * 120);
-          });
-        }, 100);
-      }, 50);
+      // Анимация появления кнопок подтипов
+      animateSubtypeButtons();
     } else {
       subtypeButtonsBlock.style.display = 'none';
       currentSubtype = null;
     }
   }
 
+  function animateSubtypeButtons() {
+    const buttons = document.querySelectorAll('.subtype-btn');
+    buttons.forEach((btn, idx) => {
+      btn.style.opacity = '0';
+      btn.style.transform = 'translateY(20px)';
+      setTimeout(() => {
+        btn.style.transition = 'all 0.5s cubic-bezier(0.4, 0, 0.2, 1)';
+        btn.style.opacity = '1';
+        btn.style.transform = 'translateY(0)';
+      }, idx * 100);
+    });
+  }
+
   function filterCards() {
     const typeBtn = document.querySelector('.type-btn.active');
     const type = typeBtn ? typeBtn.dataset.type : 'all';
+    
+    // Сначала скрываем все карточки с анимацией
     allCards.forEach(card => {
-      let show = true;
-      if (type !== 'all' && card.dataset.type !== type) show = false;
-      if (type !== 'all' && currentSubtype && card.dataset.subtype !== currentSubtype) show = false;
-      if (show) {
-        card.style.display = '';
-      } else {
-        card.style.display = 'none';
-      }
+      card.style.transition = 'opacity 0.3s, transform 0.3s';
+      card.style.opacity = '0';
+      card.style.transform = 'scale(0.95)';
     });
+
+    // После небольшой задержки показываем нужные карточки
+    setTimeout(() => {
+      allCards.forEach(card => {
+        let show = true;
+        if (type !== 'all' && card.dataset.type !== type) show = false;
+        if (type !== 'all' && currentSubtype && card.dataset.subtype !== currentSubtype) show = false;
+        
+        if (show) {
+          card.style.display = '';
+          // Запускаем анимацию появления
+          requestAnimationFrame(() => {
+            card.style.opacity = '1';
+            card.style.transform = 'scale(1)';
+          });
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }, 300);
   }
 
   // Модифицируем обработчик кнопок типа
@@ -112,23 +131,6 @@ document.addEventListener('DOMContentLoaded', function() {
       const type = btn.dataset.type;
       renderSubtypeButtons(type);
       filterCards();
-      // --- Анимация для subtype-btn при смене типа ---
-      setTimeout(() => {
-        document.querySelectorAll('.subtype-btn').forEach((btn, idx) => {
-          btn.style.opacity = '0';
-          btn.style.transform = 'translateY(30px)';
-          btn.style.transition = '';
-        });
-        setTimeout(() => {
-          document.querySelectorAll('.subtype-btn').forEach((btn, idx) => {
-            setTimeout(() => {
-              btn.style.transition = 'opacity 0.7s cubic-bezier(0.47,0,0.745,0.715), transform 0.7s cubic-bezier(0.47,0,0.745,0.715)';
-              btn.style.opacity = '1';
-              btn.style.transform = 'translateY(0)';
-            }, idx * 120);
-          });
-        }, 100);
-      }, 50);
     });
   });
 
@@ -139,87 +141,91 @@ document.addEventListener('DOMContentLoaded', function() {
   // --- Открытие/закрытие фильтров ---
   const filtersToggle = document.querySelector('.filters-toggle');
   const filtersBlock = document.querySelector('.catalog-filters');
-  filtersToggle.addEventListener('click', () => {
-    filtersBlock.classList.toggle('open');
-  });
-  document.addEventListener('click', (e) => {
-    if (!filtersBlock.contains(e.target) && filtersBlock.classList.contains('open')) {
-      filtersBlock.classList.remove('open');
-    }
-  });
+  
+  if (filtersToggle && filtersBlock) {
+    filtersToggle.addEventListener('click', () => {
+      filtersBlock.classList.toggle('open');
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!filtersBlock.contains(e.target) && filtersBlock.classList.contains('open')) {
+        filtersBlock.classList.remove('open');
+      }
+    });
+  }
 
   // --- Фильтрация по параметрам ---
   const filtersForm = document.querySelector('.filters-dropdown');
-  filtersForm.addEventListener('submit', function(e) {
-    e.preventDefault();
-    const brand = filtersForm.brand.value;
-    const size = filtersForm.size.value;
-    const price = filtersForm.price.value;
-    allCards.forEach(card => {
-      let show = true;
-      const typeBtn = document.querySelector('.type-btn.active');
-      const type = typeBtn ? typeBtn.dataset.type : 'all';
-      if (type !== 'all' && card.dataset.type !== type) show = false;
-      if (type !== 'all' && currentSubtype && card.dataset.subtype !== currentSubtype) show = false;
-      if (brand && card.dataset.brand !== brand) show = false;
-      if (size && !(card.dataset.sizes && card.dataset.sizes.split(',').includes(size))) show = false;
-      if (price && Number(card.dataset.price) > Number(price)) show = false;
-      if (show) {
-        card.style.display = '';
-      } else {
-        card.style.display = 'none';
-      }
-    });
-    filtersBlock.classList.remove('open');
-  });
+  if (filtersForm) {
+    filtersForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const brand = filtersForm.brand.value;
+      const size = filtersForm.size.value;
+      const price = filtersForm.price.value;
 
-  // --- Анимация появления кнопок выбора типа и фильтров ---
+      // Сначала скрываем все карточки с анимацией
+      allCards.forEach(card => {
+        card.style.transition = 'opacity 0.3s, transform 0.3s';
+        card.style.opacity = '0';
+        card.style.transform = 'scale(0.95)';
+      });
+
+      // После небольшой задержки показываем нужные карточки
+      setTimeout(() => {
+        allCards.forEach(card => {
+          let show = true;
+          const typeBtn = document.querySelector('.type-btn.active');
+          const type = typeBtn ? typeBtn.dataset.type : 'all';
+          
+          if (type !== 'all' && card.dataset.type !== type) show = false;
+          if (type !== 'all' && currentSubtype && card.dataset.subtype !== currentSubtype) show = false;
+          if (brand && card.dataset.brand !== brand) show = false;
+          if (size && !(card.dataset.sizes && card.dataset.sizes.split(',').includes(size))) show = false;
+          if (price && Number(card.dataset.price) > Number(price)) show = false;
+          
+          if (show) {
+            card.style.display = '';
+            // Запускаем анимацию появления
+            requestAnimationFrame(() => {
+              card.style.opacity = '1';
+              card.style.transform = 'scale(1)';
+            });
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      }, 300);
+
+      filtersBlock.classList.remove('open');
+    });
+  }
+
+  // --- Анимация появления элементов управления ---
   function animateControls() {
-    // type-btn
+    // Анимация кнопок типа
     document.querySelectorAll('.type-btn').forEach((btn, idx) => {
       btn.style.opacity = '0';
-      btn.style.transform = 'translateY(30px)';
-      btn.style.transition = '';
+      btn.style.transform = 'translateY(20px)';
+      setTimeout(() => {
+        btn.style.transition = 'all 0.5s cubic-bezier(0.4, 0, 0.2, 1)';
+        btn.style.opacity = '1';
+        btn.style.transform = 'translateY(0)';
+      }, idx * 100);
     });
-    // filters-toggle
+
+    // Анимация кнопки фильтров
     const filtersToggle = document.querySelector('.filters-toggle');
     if (filtersToggle) {
       filtersToggle.style.opacity = '0';
-      filtersToggle.style.transform = 'translateY(30px)';
-      filtersToggle.style.transition = '';
+      filtersToggle.style.transform = 'translateY(20px)';
+      setTimeout(() => {
+        filtersToggle.style.transition = 'all 0.5s cubic-bezier(0.4, 0, 0.2, 1)';
+        filtersToggle.style.opacity = '1';
+        filtersToggle.style.transform = 'translateY(0)';
+      }, 300);
     }
-    // subtype-btn
-    document.querySelectorAll('.subtype-btn').forEach((btn, idx) => {
-      btn.style.opacity = '0';
-      btn.style.transform = 'translateY(30px)';
-      btn.style.transition = '';
-    });
-    setTimeout(() => {
-      // type-btn
-      document.querySelectorAll('.type-btn').forEach((btn, idx) => {
-        setTimeout(() => {
-          btn.style.transition = 'opacity 0.7s cubic-bezier(0.47,0,0.745,0.715), transform 0.7s cubic-bezier(0.47,0,0.745,0.715)';
-          btn.style.opacity = '1';
-          btn.style.transform = 'translateY(0)';
-        }, idx * 120);
-      });
-      // filters-toggle
-      if (filtersToggle) {
-        setTimeout(() => {
-          filtersToggle.style.transition = 'opacity 0.7s cubic-bezier(0.47,0,0.745,0.715), transform 0.7s cubic-bezier(0.47,0,0.745,0.715)';
-          filtersToggle.style.opacity = '1';
-          filtersToggle.style.transform = 'translateY(0)';
-        }, 400);
-      }
-      // subtype-btn
-      document.querySelectorAll('.subtype-btn').forEach((btn, idx) => {
-        setTimeout(() => {
-          btn.style.transition = 'opacity 0.7s cubic-bezier(0.47,0,0.745,0.715), transform 0.7s cubic-bezier(0.47,0,0.745,0.715)';
-          btn.style.opacity = '1';
-          btn.style.transform = 'translateY(0)';
-        }, 600 + idx * 120);
-      });
-    }, 100);
   }
+
+  // Запускаем анимацию элементов управления
   animateControls();
 }); 

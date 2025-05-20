@@ -60,4 +60,24 @@
     <logo>images/brands/veleslogo.svg</logo>
     <alt>VELES</alt>
   </brand>
+  <contacts>
+    <phone>+375 (29) 705-85-97</phone>
+    <email>pro_shoes_store@gmail.com</email>
+    <address>г. Минск, проспект Победителей, 9, 3 этаж</address>
+    <worktime>Ежедневно с 10:00 по 21:00</worktime>
+  </contacts>
+  <advantages>
+    <item>
+      <icon>images/icons/100-percent-original-emblem-icon-vector_1.svg</icon>
+      <text>Мы закупаем напрямую у производителей</text>
+    </item>
+    <item>
+      <icon>images/icons/2-Years-Warranty_01-landscape.svg</icon>
+      <text>Гарантия 24 месяца на каждую пару</text>
+    </item>
+    <item>
+      <icon>images/icons/research.svg</icon>
+      <text>Помогаем в выборе пары, учитывая ваши особенности</text>
+    </item>
+  </advantages>
 </brands> 
