@@ -1,0 +1,91 @@
+.catalog {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0 auto;
+  max-width: 1400px;
+}
+.catalog:has(.catalog-item:not(.hidden):nth-child(6):last-child) {
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, auto);
+}
+.catalog:has(.catalog-item:not(.hidden):nth-child(5):last-child) {
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, auto);
+}
+.catalog:has(.catalog-item:not(.hidden):nth-child(5):last-child) .catalog-item:not(.hidden):nth-child(1) {
+  grid-column: 2;
+}
+.catalog:has(.catalog-item:not(.hidden):nth-child(5):last-child) .catalog-item:not(.hidden):nth-child(2) {
+  grid-column: 1;
+  grid-row: 2;
+}
+.catalog:has(.catalog-item:not(.hidden):nth-child(5):last-child) .catalog-item:not(.hidden):nth-child(3) {
+  grid-column: 2;
+  grid-row: 2;
+}
+.catalog:has(.catalog-item:not(.hidden):nth-child(5):last-child) .catalog-item:not(.hidden):nth-child(4) {
+  grid-column: 3;
+  grid-row: 2;
+}
+.catalog:has(.catalog-item:not(.hidden):nth-child(5):last-child) .catalog-item:not(.hidden):nth-child(5) {
+  grid-column: 2;
+  grid-row: 2;
+}
+.catalog:has(.catalog-item:not(.hidden):nth-child(4):last-child) {
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
+}
+.catalog:has(.catalog-item:not(.hidden):nth-child(3):last-child) {
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+}
+.catalog:has(.catalog-item:not(.hidden):nth-child(2):last-child) {
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+}
+.catalog:has(.catalog-item:not(.hidden):nth-child(1):last-child) {
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  max-width: 500px;
+}
+
+.catalog-item {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  height: 100%;
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.catalog-item.hidden {
+  display: none;
+  opacity: 0;
+  transform: scale(0.95);
+}
+.catalog-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 1200px) {
+  .catalog {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 15px;
+  }
+}
+@media (max-width: 768px) {
+  .catalog {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 10px;
+  }
+}/*# sourceMappingURL=catalog.css.map */

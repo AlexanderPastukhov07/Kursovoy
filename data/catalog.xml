@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog>
+  <item>
+    <id>1</id>
+    <name>SALOMON QUEST 4 GORE-TEX</name>
+    <category>Треккинговая обувь</category>
+    <subcategory>mid</subcategory>
+    <brand>Salomon</brand>
+    <image>images/catalog/salomon-boot.jpg</image>
+    <label>new</label>
+    <price>752</price>
+    <currency>BYN</currency>
+    <sizes>37,38,39,40,41,42</sizes>
+    <description>Профессиональные треккинговые ботинки с технологией GORE-TEX для максимальной защиты от влаги. Идеальны для сложных походов и экстремальных условий.</description>
+  </item>
+  <item>
+    <id>2</id>
+    <name>VELES KROK 3S</name>
+    <category>Треккинговая обувь</category>
+    <subcategory>mid</subcategory>
+    <brand>Veles</brand>
+    <image>images/catalog/veles_boots.jpg</image>
+    <price>353</price>
+    <currency>BYN</currency>
+    <sizes>38,39,40,41,42,43</sizes>
+    <description>Надёжные треккинговые ботинки для активного отдыха. Отличное соотношение цены и качества.</description>
+  </item>
+  <item>
+    <id>3</id>
+    <name>New Balance FuelCell Rebel v4</name>
+    <category>Беговая обувь</category>
+    <subcategory>classic</subcategory>
+    <brand>New Balance</brand>
+    <image>images/catalog/new_balance_running.jpg</image>
+    <price>830</price>
+    <currency>BYN</currency>
+    <sizes>36,37,38,39,40,41</sizes>
+    <description>Инновационные беговые кроссовки с технологией FuelCell для максимальной отзывчивости и комфорта при беге.</description>
+  </item>
+  <item>
+    <id>4</id>
+    <name>Reebok Zignition</name>
+    <category>Беговая обувь</category>
+    <subcategory>classic</subcategory>
+    <brand>Reebok</brand>
+    <image>images/catalog/reebok_running.jpg</image>
+    <price>327</price>
+    <currency>BYN</currency>
+    <sizes>40,41,42,43,44,45</sizes>
+    <description>Стильные и функциональные кроссовки для повседневных тренировок и бега.</description>
+  </item>
+  <item>
+    <id>5</id>
+    <name>HAIX Scout-2.0</name>
+    <category>Треккинговая обувь</category>
+    <subcategory>mid</subcategory>
+    <brand>Haix</brand>
+    <image>images/catalog/haix_boot.jpg</image>
+    <label>hot</label>
+    <price>1055</price>
+    <currency>BYN</currency>
+    <sizes>41,42,43,44,45</sizes>
+    <description>Профессиональные треккинговые ботинки с усиленной защитой и отличной поддержкой голеностопа.</description>
+  </item>
+  <item>
+    <id>6</id>
+    <name>Prabos GREYMAN MID GTX</name>
+    <category>Треккинговая обувь</category>
+    <subcategory>mid</subcategory>
+    <brand>Prabos</brand>
+    <image>images/catalog/prabos_boot.jpg</image>
+    <price>945</price>
+    <currency>BYN</currency>
+    <sizes>37,38,39,40,41</sizes>
+    <description>Современные треккинговые ботинки с мембраной GORE-TEX для защиты от влаги и комфорта в любую погоду.</description>
+  </item>
+  <item>
+    <id>7</id>
+    <name>LOWA TIBET EVO GTX</name>
+    <category>Треккинговая обувь</category>
+    <subcategory>mid</subcategory>
+    <brand>Lowa</brand>
+    <image>images/catalog/lowa_boot.jpg</image>
+    <label>hot</label>
+    <price>1170</price>
+    <currency>BYN</currency>
+    <sizes>42,43,44,45</sizes>
+    <description>Премиальные треккинговые ботинки с технологией GORE-TEX и инновационной системой поддержки.</description>
+  </item>
+  <item>
+    <id>8</id>
+    <name>Timberland Mt. Maddsen Peak Mid Waterproof Hiking Boot</name>
+    <category>Треккинговая обувь</category>
+    <subcategory>mid</subcategory>
+    <brand>Timberland</brand>
+    <image>images/catalog/timberland_boot.jpg</image>
+    <price>510</price>
+    <currency>BYN</currency>
+    <sizes>36,37,38,39,40</sizes>
+    <description>Стильные и надёжные ботинки для активного отдыха с водонепроницаемой мембраной.</description>
+  </item>
+  <item>
+    <id>9</id>
+    <name>ASICS GEL-VENTURE 10</name>
+    <category>Беговая обувь</category>
+    <subcategory>trail</subcategory>
+    <brand>Asics</brand>
+    <image>images/catalog/asics_trail_run.jpg</image>
+    <label>sale</label>
+    <price>292</price>
+    <currency>BYN</currency>
+    <sizes>38,39,40,41,42,43</sizes>
+    <description>Трейловые кроссовки с технологией GEL для амортизации и защиты на сложных поверхностях.</description>
+  </item>
+  <item>
+    <id>10</id>
+    <name>UA Infinite Pro 2</name>
+    <category>Беговая обувь</category>
+    <subcategory>classic</subcategory>
+    <brand>Under Armour</brand>
+    <image>images/catalog/ua_sneaker.jpg</image>
+    <price>475</price>
+    <currency>BYN</currency>
+    <sizes>39,40,41,42,43,44</sizes>
+    <description>Профессиональные беговые кроссовки с инновационной системой амортизации и поддержки.</description>
+  </item>
+  <item>
+    <id>11</id>
+    <name>ASICS GEL-KAYANO 31</name>
+    <category>Беговая обувь</category>
+    <subcategory>classic</subcategory>
+    <brand>Asics</brand>
+    <image>images/catalog/asics_running.jpg</image>
+    <price>730</price>
+    <currency>BYN</currency>
+    <sizes>40,41,42,43,44,45</sizes>
+    <description>Флагманская модель беговых кроссовок с продвинутой системой стабилизации и амортизации.</description>
+  </item>
+  <item>
+    <id>12</id>
+    <name>VELES KROK 2N</name>
+    <category>Треккинговая обувь</category>
+    <subcategory>light</subcategory>
+    <brand>Veles</brand>
+    <image>images/catalog/veles_low_boot.png</image>
+    <price>278</price>
+    <currency>BYN</currency>
+    <sizes>37,38,39,40,41,42</sizes>
+    <description>Лёгкие треккинговые ботинки для активного отдыха и повседневного использования.</description>
+  </item>
+</catalog> 
